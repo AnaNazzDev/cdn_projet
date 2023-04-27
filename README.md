@@ -9,6 +9,7 @@ I know it's not the most optimized or best coded script. I wanted to practice wi
 - Upload file
 - Get list of all files stored
 - Delete 
+- The best 404 page (https://freefrontend.com/)
 - In reality there is not really more ^^
 
 ## Requirements
