@@ -1,0 +1,16 @@
+{
+  "name": "cdn_projet",
+  "version": "1.0.0",
+  "description": "A simple training cdn project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "AnaNazz",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "path": "^0.12.7"
+  }
+}
