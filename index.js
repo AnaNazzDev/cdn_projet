@@ -16,7 +16,6 @@ app.use(express.json());
 
 app.use(express.static(__dirname + '/public'));
 
-
 app.get('/', (req, res) => {
     res.sendFile(__dirname + '/views/index.html');
 });
@@ -86,7 +85,7 @@ app.get('/list', (req, res) => {
                     const preview = `<img class="img-preview" src="/uploads/${file}" />`;
                     return `
                       <tr>
-                        <td>${file}</td>
+                        <td><a href="/uploads/${file}" target="_BLANK">${file}</a></td>
                         <td>${preview}</td>
                         <td>
                           <form method="post" action="/delete">
@@ -123,6 +122,10 @@ app.post('/delete', (req, res) => {
         res.redirect('/list?success=false');
     }
 
+});
+
+app.use((req, res) => {
+    res.status(404).sendFile(__dirname + '/views/404.html');
 });
 
 // Start the server
